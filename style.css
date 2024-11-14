@@ -196,3 +196,8 @@ footer {
         font-size: 3rem; /* Larger font size for the banner on desktop */
     }
 }
+
+ #footerNav{
+    color: white;
+    margin: 0 5px;
+}
