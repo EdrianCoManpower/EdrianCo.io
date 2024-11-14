@@ -1,4 +1,5 @@
 /* General Styles */
+
 body, html {
     height: 100%;
     margin: 0;
@@ -10,11 +11,13 @@ main {
     flex-grow: 1; /* Ensures content takes up available space */
 }
 
+
 body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;  /* Ensures footer stays at the bottom */
     height: 100vh;
 }
 
@@ -51,9 +54,21 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Allow the nav items to wrap on smaller screens */
+    flex-wrap: wrap;
     margin-top: 10px;
 }
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: red;
+}
+
 
 nav a, .dropdown {
     color: #003a75;
@@ -97,30 +112,7 @@ nav a:hover, .dropdown:hover > a {
     color: #002752;
 }
 
-/* Banner Section */
-.banner {
-    background: url('banner.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
-    padding: 3rem 1rem;
-}
 
-.banner h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-/* Main Content Sections */
-.section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-}
-
-.section h2 {
-    color: #0056b3;
-    margin-bottom: 1rem;
-}
 
 /* Footer */
 footer {
@@ -158,13 +150,7 @@ footer {
         text-align: center;
     }
 
-    .banner h1 {
-        font-size: 2rem; /* Smaller font size for the banner heading */
-    }
 
-    .section {
-        padding: 1rem; /* Reduce padding on smaller screens */
-    }
 }
 
 /* For medium devices (tablets) */
@@ -208,10 +194,9 @@ footer {
         justify-content: flex-start;
     }
 
-    .banner h1 {
-        font-size: 3rem; /* Larger font size for the banner on desktop */
-    }
+   
 }
+
 
 
 
@@ -221,11 +206,8 @@ footer {
     background-color: #002752;
     color: white;
     padding: 20px 0;
-    position: relative; /* Keeps it in the document flow */
-    bottom: 0;
-    left: 0;
-    z-index: 10;
     text-align: center;
+    margin-top: auto; /* Pushes footer to the bottom */
 }
 
 .footer-container {
@@ -253,7 +235,7 @@ footer {
 #pages {
     text-align: center;
 }
-
+ 
 #footer-nav {
     display: flex;
     gap: 10px;
@@ -287,14 +269,15 @@ footer {
 
     .footer-container {
         flex-direction: column;
-        /* align-items: center; */
+        justify-content: center;
     }
 
-    .footer-left, #pages {
+    .footer-left,  #pages {
         flex-basis: 100%;
-        text-align: center;  /* Update this to center the text in .footer-right */
+        text-align: center;
     }
 
+  
     .footer-right{
         flex-basis: 100%;
         text-align: center !important;
@@ -307,5 +290,11 @@ footer {
 
     .footer-copy {
         margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #footer-nav a {
+        font-size: 12px;
     }
 }
