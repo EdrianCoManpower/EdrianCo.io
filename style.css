@@ -197,6 +197,13 @@ footer {
     }
 }
 
+#footer-nav {
+    display: flex; 
+    gap: 15px; 
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
 #footer-nav a {
     color: white !important; /* Set text color to white */
     text-decoration: none; /* Remove underline */
