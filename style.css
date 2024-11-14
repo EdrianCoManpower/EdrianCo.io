@@ -1,9 +1,10 @@
 /* General Styles */
 body {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    margin: 0;
 }
 
 .main-content {
@@ -201,9 +202,9 @@ footer {
     }
 }
 
-#footer-nav {
+footer{
     display: flex;
-    gap: 15px;
+    gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
     position: fixed;
@@ -213,14 +214,13 @@ footer {
     padding: 20px;
     background-color: #333;
     color: white;
-    z-index: 10;
+    z-index: 10; 
 }
 
 
 #footer-nav {
     display: flex; 
-    gap: 15px; 
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -234,4 +234,16 @@ footer {
 #footer-nav a:hover {
     color: rgb(148, 148, 148) !important ; /* Change color on hover */
     text-decoration: underline; /* Underline on hover */
+}
+
+#footer-contact{
+    flex-basis: 20%; 
+    text-align: right; 
+    padding-right: 30px;
+    Font-size: 15px;
+}
+
+#pages{
+   flex-basis: 50%; 
+   text-align: center;
 }
