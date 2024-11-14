@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header and Logo */
+header {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+}
+
+.logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 20px;
+    height: 70px; /* Adjust the size of the logo as needed */
+    width: auto;
+    margin-top: 10px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow the nav items to wrap on smaller screens */
+    margin-top: 10px;
+}
+
+nav a, .dropdown {
+    color: #003a75;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #003a75;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Positions dropdown directly below "About Us" */
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #002752;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+nav a:hover, .dropdown:hover > a {
+    color: #002752;
+}
+
+/* Banner Section */
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Main Content Sections */
+.section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+
+.section h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #003a75;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Responsive Design */
+
+/* For small devices (phones) */
+@media (max-width: 600px) {
+    .logo {
+        margin-left: 10px;
+        margin-top: 5px;
+        height: 50px; /* Reduce logo size on small screens */
+    }
+
+    header {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column; /* Stack nav links vertically on small screens */
+    }
+
+    nav a {
+        padding: 1rem; /* Increase padding for better tap targets on mobile */
+        text-align: center;
+    }
+
+    .banner h1 {
+        font-size: 2rem; /* Smaller font size for the banner heading */
+    }
+
+    .section {
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+}
+
+/* For medium devices (tablets) */
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 20px;
+        height: 60px; /* Adjust logo size on tablets */
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .banner h1 {
+        font-size: 2.2rem; /* Slightly smaller font size for tablets */
+    }
+
+    .section {
+        padding: 1.5rem; /* Adjust section padding for medium screens */
+    }
+}
+
+/* For large screens (desktops) */
+@media (min-width: 1200px) {
+    .logo {
+        margin-left: 30px;
+        height: 80px; /* Larger logo for larger screens */
+    }
+
+    header {
+        padding: 1.5rem;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    .banner h1 {
+        font-size: 3rem; /* Larger font size for the banner on desktop */
+    }
+}
