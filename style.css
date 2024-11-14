@@ -198,13 +198,13 @@ footer {
 }
 
 #footer-nav a {
-    color: white; /* Set text color to white */
+    color: white !important; /* Set text color to white */
     text-decoration: none; /* Remove underline */
     margin: 0 10px; /* Add spacing between links */
     font-size: 14px; /* Adjust font size */
 }
 
 #footer-nav a:hover {
-    color: rgb(148, 148, 148); /* Change color on hover */
+    color: rgb(148, 148, 148) !important ; /* Change color on hover */
     text-decoration: underline; /* Underline on hover */
 }
