@@ -10,26 +10,13 @@ body {
 }
 
 .banner {
-    color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 3rem 1rem;
     
 }
 
-/* Main Content Sections */
-/* .section {
-    padding: 2rem;
-    max-width: 800px;
-    margin: auto;
-}s
 
-.section h2 {
-    color: #0056b3;
-    margin-bottom: 1rem;
-} */
-
-
-/* Mission and Vision Section */
 /* Mission and Vision Section */
 .mission-vision {
     display: flex; /* Align boxes in a row */
@@ -102,7 +89,8 @@ body {
     margin: 0 auto;           
     padding: 20px;            
     border-radius: 10px;      
-    text-align: justify;      
+    text-align: justify;
+    color: white;      
 }
 
 #first h1{
@@ -120,11 +108,13 @@ body {
 /* Core Values Section */
 .core-values {
     max-width: 1700px;  
-    padding: 2rem;
+    padding: 2rem 2rem 30px 2rem;
     margin: 1rem 1rem 4rem 1rem;
     text-align: center;  
     max-width: 1700px;   
-    margin: 0 auto;      
+    margin: 20px auto;  
+    background-color: white;    
+    border-radius: 5px;
 }
 
 .core-values .section-title {

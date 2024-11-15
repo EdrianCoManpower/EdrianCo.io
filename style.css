@@ -57,7 +57,7 @@ nav a, .dropdown {
     font-weight: bold;
     display: flex;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .dropdown {
@@ -251,7 +251,7 @@ footer {
     color: white;
     text-decoration: none;
     margin: 0 3px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #footer-nav a:hover {
