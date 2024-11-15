@@ -87,9 +87,9 @@
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .box-wrapper {
-        grid-template-columns: 1fr 1fr; /* Stacks two columns on smaller screens */
+        grid-template-columns: 1fr 1fr; /* Stacks two columns on medium screens */
     }
 
     .service-list,
@@ -98,17 +98,45 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .box-wrapper {
+        grid-template-columns: 1fr; /* Stacks all columns into one on smaller screens */
+    }
+
+    .service-list,
+    .employer-list {
+        grid-template-columns: 1fr; /* Stack the services and employers sections */
+    }
+
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .view-jobs {
         font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    .job-list li {
+        font-size: 1rem; /* Adjust font size for smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .view-jobs {
+        font-size: 0.8rem;
     }
 
     .service-list,
     .employer-list {
         grid-template-columns: 1fr; /* Stack the sections on the smallest screens */
+    }
+
+    .job-list li {
+        font-size: 0.9rem; /* Further reduce font size for smaller devices */
     }
 }
