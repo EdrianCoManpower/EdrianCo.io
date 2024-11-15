@@ -48,7 +48,6 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px;
     background-color: #002752;
     color: antiquewhite;
 }
