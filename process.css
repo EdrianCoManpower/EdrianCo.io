@@ -10,3 +10,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow around the element */
     margin-top: 50px; /* Adds some space from the top of the page */
 }
+
+/* Styling for the image container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Adds space between the images */
+    margin-top: 30px; /* Adds space between the heading and images */
+}
+
+.image-container img {
+    width: 300px; /* Sets a fixed width for the images */
+    height: auto; /* Keeps the image's aspect ratio */
+    border-radius: 10px; /* Rounds the corners of the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow around the images */
+}
