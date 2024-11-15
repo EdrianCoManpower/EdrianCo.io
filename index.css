@@ -1,0 +1,114 @@
+/* Container for Both Boxes */
+.box-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Create 3 columns */
+    gap: 20px; /* Add space between columns */
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+/* Section Styling for Featured Jobs, Services, Employers */
+.section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #002752;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #33C63A;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Job List */
+.job-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.job-list li {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.view-jobs {
+    display: inline-block;
+    background-color: #33C63A;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.view-jobs:hover {
+    background-color: #28a429;
+}
+
+/* Employers Section */
+.employer-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.employer {
+    text-align: center;
+}
+
+.employer-logo {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+/* Services Section */
+.service-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.service {
+    text-align: center;
+}
+
+.service-image {
+    max-width: 60px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .box-wrapper {
+        grid-template-columns: 1fr 1fr; /* Stacks two columns on smaller screens */
+    }
+
+    .service-list,
+    .employer-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .view-jobs {
+        font-size: 0.9rem;
+    }
+
+    .service-list,
+    .employer-list {
+        grid-template-columns: 1fr; /* Stack the sections on the smallest screens */
+    }
+}

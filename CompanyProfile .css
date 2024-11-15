@@ -121,7 +121,7 @@ body {
 .core-values {
     max-width: 1700px;  
     padding: 2rem;
-    margin: 1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 4rem 1rem;
     text-align: center;  
     max-width: 1700px;   
     margin: 0 auto;      
@@ -129,7 +129,7 @@ body {
 
 .core-values .section-title {
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     color: #ffffff;
     background-color: #b90808;
 }
@@ -146,7 +146,7 @@ body {
     text-align: center;   
     grid-template-areas:
         "item1 item2 item3 item4 item5 item6"; 
-    margin: 0 auto;        
+    margin: 0 auto 7rem auto;        
 }
 
 /* Core Value Box */

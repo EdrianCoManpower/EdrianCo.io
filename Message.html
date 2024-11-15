@@ -9,30 +9,7 @@
 <body>
 
 <!-- Navigation -->
-<nav>
-
-    <!-- Logo Section -->
-    <div class="logo-container">
-        <img src="img/logo.png" alt="logo" class="logo">
-    </div>
-    
-    <a href="index.html">Home</a>
-    
-    <!-- About Us Dropdown -->
-    <div class="dropdown">
-        <a href="#about-us" class="dropbtn">About Us</a>
-        <div class="dropdown-content">
-            <a href="CompanyProfile.html">Company Profile</a>
-            <a href="Message.html"  style="color:#8eb2c8">Message from the President</a>
-        </div>
-    </div>
-        
-        <a href="https://forms.gle/QBvWM3EMj9oSozw28">Apply Now</a>
-        <a href="https://www.facebook.com/profile.php?id=61568564760346">Job Listing</a>
-        <a href="Services.html">Services</a>
-        <a href="ContactUs.html">Contact Us</a>
-        <a href="OurProcess.html">Our Process</a>
-    </nav>
+<div id="navbar"></div>
  
 
     <h1>
@@ -41,41 +18,25 @@
     </h1>
     
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <img src="img/logo.png" alt="logo" style="width: 70px; margin-right: 10px;">
-                <p>Your trusted partner in connecting talent and bridging success. Helping you grow, one hire at a time.</p>
-            </div>
-            
-            <div id="pages">
-                <nav>
-                    <div id="footer-nav">
-                        <a href="index.html">Home</a>
-                        <a href="#">About Us</a>
-                        <a href="https://forms.gle/QBvWM3EMj9oSozw28">Apply Now</a>
-                        <a href="https://www.facebook.com/profile.php?id=6156856476034">Job Listing</a>
-                        <a href="Services.html">Services</a>
-                        <a href="ContactUs.html">Contact Us</a>
-                        <a href="OurProcess.html">Our Process</a>
-                    </div>
-                </nav>
-            </div>
-            
-            <div class="footer-right">
-                <p>Email: contact@edriano.com</p>
-                <p>Phone: (123) 456-7890</p>
-                <p>Address: 1234 Manpower St, City, Country</p>
-                <p>Follow us on 
-                    <a href="https://www.facebook.com/profile.php?id=61568564760346" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1024px-Facebook_f_logo_%282019%29.svg.png" alt="Facebook Logo" style="width: 20px; height: 20px; vertical-align: middle; margin-left: 5px;">
-                    </a>
-                </p>
-            </div>
-            </div>
-    
-        <p class="footer-copy">&copy; 2024 Edriano Manpower Services. All Rights Reserved. <span style="color: red;">❤️</span></p>
-    </footer>
-    
+<div id="footer"></div>
+
+
+<script>
+    // Fetch the navbar.html and inject it into the #navbar container
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading the navbar:', error));
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading the footer:', error));
+
+</script>
 </body>
 </html>

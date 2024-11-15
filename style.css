@@ -40,6 +40,7 @@ body {
     height: 70px; /* Adjust the size of the logo as needed */
     width: auto;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Navigation */
@@ -48,6 +49,8 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 10px;
+    background-color: #002752;
+    color: antiquewhite;
 }
 
 nav a {
@@ -58,7 +61,7 @@ nav a {
 }
 
 nav a, .dropdown {
-    color: #003a75;
+    color: #ffffff;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     font-weight: bold;
@@ -122,7 +125,11 @@ nav a:hover, .dropdown:hover > a {
     }
 
     nav {
-        flex-direction: column; /* Stack nav links vertically on small screens */
+        /* flex-direction: column;  */
+        flex-basis: 100%;
+        text-align: center;
+        }
+    
     }
 
     nav a {
@@ -131,7 +138,7 @@ nav a:hover, .dropdown:hover > a {
     }
 
 
-}
+ 
 
 /* For medium devices (tablets) */
 @media (max-width: 768px) {
@@ -177,57 +184,112 @@ nav a:hover, .dropdown:hover > a {
    
 }
 
+.call-to-action {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #002752;
+}
+
+.call-to-action p {
+    margin-bottom: 10px;
+}
 
 
+
+/* New Section with Big Text and Button */
+.intro {
+    text-align: center; /* Center content */
+    padding: 3rem 1rem;
+}
+
+.intro h2 {
+    font-size: 3rem; /* Big text size */
+    margin-bottom: 2rem;
+    color: #003a75; /* Dark blue color */
+}
+
+.apply-button {
+    display: inline-block;
+    background-color: #33C63A; /* Green background */
+    color: white; /* White text */
+    font-size: 2rem; /* Larger font size for big text */
+    padding: 30px 60px; /* Increased padding for larger size */
+    border-radius: 15px; /* Slightly rounded corners for a box-like appearance */
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for a lifted effect */
+    margin: 20px auto; /* Centering with margin */
+    display: block; /* Ensure it behaves like a box */
+    width: fit-content; /* Ensures box size adjusts to the content */
+}
+
+.apply-button:hover {
+    background-color: #28a428; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+.apply-button:hover {
+    background-color: #28a745; /* Darker green on hover */
+}
 
 
 footer {
     width: 100%;
     background-color: #002752;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0; /* Reduced padding for smaller height */
     text-align: center;
-    margin-top: auto; /* Pushes footer to the bottom */
+    margin-top: auto;
+    font-size: 14px; /* Smaller font size */
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 20px;
+    padding: 0 15px; /* Smaller padding */
     flex-wrap: wrap;
 }
 
-.footer-left, .footer-right, #pages {
-    flex-basis: 30%;
-    text-align: left;
-    margin-bottom: 20px;
+.footer-left, .footer-right{
+    flex-basis: 20%;
+    text-align: center;
+    margin-bottom: 10px; /* Smaller margin between sections */
+    font-size: large;
 }
+
 
 .footer-left {
     text-align: left;
+    margin-left: 30px;
 }
 
 .footer-right {
     text-align: right;
+    margin-right: 30px;
+    margin-top: 50px;
 }
 
-#pages {
-    text-align: center;
-}
- 
+
+
 #footer-nav {
     display: flex;
-    gap: 10px;
+    gap: 5px; /* Smaller gap */
     flex-wrap: wrap;
     justify-content: center;
 }
 
 #footer-nav a {
+    text-align: center;
     color: white;
     text-decoration: none;
-    margin: 0 5px;
-    font-size: 14px;
+    margin: 0 3px; /* Smaller margin */
+    font-size: 15px; /* Smaller font size for links */
 }
 
 #footer-nav a:hover {
@@ -237,14 +299,14 @@ footer {
 
 .footer-copy {
     text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 10px; /* Smaller margin above the copyright text */
+    font-size: 15px; /* Smaller font size */
     width: 100%;
 }
 
 @media (max-width: 768px) {
     footer {
-        padding: 15px 0;
+        padding: 10px 0; /* Reduced padding */
     }
 
     .footer-container {
@@ -252,29 +314,25 @@ footer {
         justify-content: center;
     }
 
-    .footer-left,  #pages {
+    .footer-left, #pages {
         flex-basis: 100%;
         text-align: center;
     }
 
-  
-    .footer-right{
+    .footer-right {
         flex-basis: 100%;
         text-align: center !important;
-        margin-left: 20%;
-    }
-
-    #footer-nav {
-        justify-content: center;
+        margin: auto;
+        margin-bottom: 20px;
     }
 
     .footer-copy {
-        margin-top: 15px;
+        margin-top: 10px; /* Reduced margin */
     }
 }
 
 @media (max-width: 480px) {
     #footer-nav a {
-        font-size: 12px;
+        font-size: 10px; /* Even smaller font for extra-small screens */
     }
 }
