@@ -1,0 +1,12 @@
+#jerome {
+    font-size: 3em; /* Makes the text bigger */
+    text-align: center; /* Centers the text */
+    color: red; /* Changes the text color to red */
+    font-family: 'Arial', sans-serif; /* Sets a clean font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visibility */
+    padding: 20px; /* Adds padding for some space around the text */
+    background-color: #fff0f0; /* Adds a soft background color */
+    border-radius: 10px; /* Rounds the corners for a smoother look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow around the element */
+    margin-top: 50px; /* Adds some space from the top of the page */
+}

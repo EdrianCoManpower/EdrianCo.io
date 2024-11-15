@@ -26,9 +26,8 @@ body {
     padding: 20px;
 }
 
-/*Logo */
-
-
+/* Logo and navigation container */
+/* Logo and navigation container */
 .logo-container {
     flex-shrink: 0;
     display: flex;
@@ -46,7 +45,7 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
     margin-top: 10px;
 }
 
@@ -99,13 +98,6 @@ nav a:hover, .dropdown:hover > a {
     color: #8eb2c8;
 }
 
-
-
-/* Footer */
-/*   */
-
-/* Responsive Design */
-
 /* For small devices (phones) */
 @media (max-width: 600px) {
     .logo {
@@ -122,15 +114,32 @@ nav a:hover, .dropdown:hover > a {
     }
 
     nav {
-        flex-direction: column; /* Stack nav links vertically on small screens */
+        flex-direction: row; /* Keep nav items in a row */
+        justify-content: center; /* Center items */
+        margin-top: 10px;
+        width: 100%;
     }
 
     nav a {
         padding: 1rem; /* Increase padding for better tap targets on mobile */
         text-align: center;
+        width: 50%; /* Set width to 50% so two items appear in each row */
+    }
+}
+
+/* For extra small devices (under 400px) */
+@media (max-width: 400px) {
+    nav {
+        flex-direction: column; /* Stack navigation items vertically */
+        justify-content: flex-start;
+        width: 100%; /* Ensure the nav takes full width */
     }
 
-
+    nav a {
+        width: 100%; /* Make navigation items full width on extra small screens */
+        padding: 1rem; /* Adjust padding for better spacing */
+        text-align: center; /* Center text in each item */
+    }
 }
 
 /* For medium devices (tablets) */
@@ -173,11 +182,7 @@ nav a:hover, .dropdown:hover > a {
     nav {
         justify-content: flex-start;
     }
-
-   
 }
-
-
 
 
 

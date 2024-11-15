@@ -36,11 +36,9 @@ body {
     justify-content: center; /* Center align the boxes */
     margin: 1rem 1rem 1rem 1rem;
     max-width: 1700px;         
-    margin: 0 auto;           
+    margin: 20px auto;           
     padding: 20px;            
-    background-color: #f9f9f9;
     border-radius: 10px;      
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     text-align: justify; 
 }
 
@@ -103,9 +101,7 @@ body {
     max-width: 1700px;         
     margin: 0 auto;           
     padding: 20px;            
-    background-color: #f9f9f9;
     border-radius: 10px;      
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     text-align: justify;      
 }
 
@@ -119,4 +115,113 @@ body {
     font-size: 1.5em;         
     line-height: 1.6;         
     margin-bottom: 15px;      
+}
+
+/* Core Values Section */
+.core-values {
+    max-width: 1700px;  
+    padding: 2rem;
+    margin: 1rem 1rem 1rem 1rem;
+    text-align: center;  
+    max-width: 1700px;   
+    margin: 0 auto;      
+}
+
+.core-values .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+    background-color: #b90808;
+}
+
+
+
+/* Core Values Container */
+.core-values-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 90px;
+    justify-items: center; 
+    align-items: center;   
+    text-align: center;   
+    grid-template-areas:
+        "item1 item2 item3 item4 item5 item6"; 
+    margin: 0 auto;        
+}
+
+/* Core Value Box */
+.core-value {
+    width: 100%; 
+    max-width: 1950px; /* Set a maximum width for the box */
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    /* background-color: #fff; */
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image inside each core value box */
+.core-value img {
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Ensures image size is consistent */
+    margin-bottom: 1rem;
+}
+
+/* Text for Core Values */
+.core-value p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #002752;
+}
+
+
+/* Specific Grid Areas for Items */
+.core-value:nth-child(1) {
+    grid-area: item1;
+}
+
+.core-value:nth-child(2) {
+    grid-area: item2;
+}
+
+.core-value:nth-child(3) {
+    grid-area: item3;
+}
+
+.core-value:nth-child(4) {
+    grid-area: item4;
+}
+
+.core-value:nth-child(5) {
+    grid-area: item5;
+}
+
+.core-value:nth-child(6) {
+    grid-area: item6;
+}
+
+/* Responsive Design: Adjusting layout for smaller screens */
+@media (max-width: 768px) {
+    .core-values-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 in a row for medium screens */
+        grid-template-areas:
+            "item1 item2"
+            "item3 item4"
+            "item5 item6"; /* Adjust layout for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .core-values-container {
+        grid-template-columns: 1fr; /* 1 in a row for smaller screens */
+        grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5"
+            "item6"; /* Stack all items vertically */
+    }
 }
