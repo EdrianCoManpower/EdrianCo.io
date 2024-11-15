@@ -1,14 +1,36 @@
+/* General Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+body {
+    padding: 0;
+    justify-content: space-between;
+    height: 100vh;
+    background-image: url('img/wallpaer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Container for Both Boxes */
 .box-wrapper {
     display: grid;
-    grid-template-columns: 3fr 3fr 4fr; /* Make the three columns wider */
-    gap: 20px; /* Add space between columns */
-    max-width: 100%; /* Make sure it spans the entire width of the page */
-    margin:20px 100px ; /* Center the content */
+    grid-template-columns: 1fr; /* Set to a single column */
+    gap: 20px; /* Add space between sections */
+    max-width: 100%;
+    margin: 20px auto; /* Center the content */
     text-align: center;
+    padding: 0 10px;
 }
 
-/* Section Styling for Featured Jobs, Services, Employers */
 .section {
     background-color: #f9f9f9;
     padding: 20px;
@@ -58,7 +80,7 @@
 .employer-list {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: 3fr 3fr 3fr; /* Adjust this to make Employer section similar */
+    grid-template-columns: 1fr; /* Stack employers in one column */
     gap: 10px;
 }
 
@@ -79,24 +101,13 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.section-title {
-    font-size: 1.8rem;
-    color: #003a75;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #33C63A;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* Promotion List */
 .promotion-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr; /* Stack promotion items in one column */
     gap: 20px;
     margin-top: 20px;
 }
 
-/* Individual Promotion */
 .promotion {
     background-color: #fff;
     padding: 15px;
@@ -106,7 +117,7 @@
 }
 
 .promotion-image {
-    max-width: 200px; /* Adjust width for the Facebook image */
+    max-width: 200px;
     margin-bottom: 10px;
 }
 
@@ -118,7 +129,7 @@
 /* Call to Action Button */
 .cta-button {
     display: inline-block;
-    background-color: #3b5998; /* Facebook Blue */
+    background-color: #3b5998;
     color: white;
     font-size: 1.1rem;
     padding: 12px 25px;
@@ -131,22 +142,22 @@
 }
 
 .cta-button:hover {
-    background-color: #2d4373; /* Darker Facebook Blue */
+    background-color: #2d4373;
     transform: scale(1.05);
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
     .box-wrapper {
-        grid-template-columns: 1fr 1fr; /* Stacks two columns on medium screens */
+        grid-template-columns: 1fr; /* Keep it in a single column */
     }
 
     .employer-list {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 
     .facebook-promotion {
-        grid-column: span 2; /* Make Facebook promotion span across 2 columns */
+        grid-column: span 1; /* Ensure promotion spans across one column */
     }
 }
 
@@ -178,7 +189,7 @@
     }
 
     .employer-list {
-        grid-template-columns: 1fr; /* Stack the sections on the smallest screens */
+        grid-template-columns: 1fr;
     }
 
     .promotion-list {
