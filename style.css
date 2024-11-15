@@ -1,33 +1,33 @@
 /* General Styles */
-
 body, html {
-    height: 100%;
-    margin: 0;
+    height: 100%; /* Ensure body and html take up full height */
+    margin: 0; /* Remove default margin */
     display: flex;
     flex-direction: column;
 }
 
 main {
-    flex-grow: 1; /* Ensures content takes up available space */
+    flex-grow: 1;
 }
-
 
 body {
-    margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;  /* Ensures footer stays at the bottom */
-    height: 100vh;
+    margin: 0; /* Remove any default margin */
+    justify-content: space-between;
+    height: 100vh; /* Full viewport height */
+    background-image: url('img/wallpaer.jpg'); /* Set the correct path to your image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the background fixed while scrolling */
 }
+
+
 
 .main-content {
     flex-grow: 1;
     padding: 20px;
 }
-
-/* Header and Logo */
-
 
 .logo-container {
     flex-shrink: 0;
@@ -36,11 +36,9 @@ body {
 }
 
 .logo {
-    margin-left: 20px;
-    height: 70px; /* Adjust the size of the logo as needed */
+    margin: 10px 0 10px 20px;
+    height: 70px;
     width: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 /* Navigation */
@@ -48,24 +46,18 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #002752;
+    background-color: #092160;
     color: antiquewhite;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 16px;
-}
+   }
 
 nav a, .dropdown {
-    color: #ffffff;
+    color: white;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     font-weight: bold;
     display: flex;
     align-items: center;
+    font-size: 25px;
 }
 
 .dropdown {
@@ -77,16 +69,12 @@ nav a, .dropdown {
     position: absolute;
     background-color: #003a75;
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    top: 100%; /* Positions dropdown directly below "About Us" */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    top: 100%;
 }
 
 .dropdown-content a {
-    color: #fff;
     padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    display: block;
 }
 
 .dropdown-content a:hover {
@@ -101,19 +89,11 @@ nav a:hover, .dropdown:hover > a {
     color: #8eb2c8;
 }
 
-
-
-/* Footer */
-/*   */
-
-/* Responsive Design */
-
-/* For small devices (phones) */
+/* Media Queries */
 @media (max-width: 600px) {
     .logo {
         margin-left: 10px;
-        margin-top: 5px;
-        height: 50px; /* Reduce logo size on small screens */
+        height: 50px;
     }
 
     header {
@@ -124,26 +104,19 @@ nav a:hover, .dropdown:hover > a {
     }
 
     nav {
-        /* flex-direction: column;  */
         flex-basis: 100%;
         text-align: center;
-        }
-    
     }
 
     nav a {
-        padding: 1rem; /* Increase padding for better tap targets on mobile */
-        text-align: center;
+        padding: 1rem;
     }
+}
 
-
- 
-
-/* For medium devices (tablets) */
 @media (max-width: 768px) {
     .logo {
+        height: 60px;
         margin-left: 20px;
-        height: 60px; /* Adjust logo size on tablets */
     }
 
     header {
@@ -151,25 +124,19 @@ nav a:hover, .dropdown:hover > a {
         justify-content: space-between;
     }
 
-    nav {
-        justify-content: flex-start;
-        margin-top: 10px;
-    }
-
     .banner h1 {
-        font-size: 2.2rem; /* Slightly smaller font size for tablets */
+        font-size: 2.2rem;
     }
 
     .section {
-        padding: 1.5rem; /* Adjust section padding for medium screens */
+        padding: 1.5rem;
     }
 }
 
-/* For large screens (desktops) */
 @media (min-width: 1200px) {
     .logo {
+        height: 80px;
         margin-left: 30px;
-        height: 80px; /* Larger logo for larger screens */
     }
 
     header {
@@ -179,89 +146,87 @@ nav a:hover, .dropdown:hover > a {
     nav {
         justify-content: flex-start;
     }
-
-   
 }
 
+
+
+/* Call to Action */
 .call-to-action {
     text-align: center;
-    margin: 20px 0;
+    margin: 0; /* Remove top and bottom margin */
     font-size: 1.5rem;
     font-weight: bold;
-    color: #002752;
+    color: #ffffff;
 }
 
 .call-to-action p {
-    margin-bottom: 10px;
+    margin: 0; /* Remove bottom margin */
 }
-
 
 
 /* New Section with Big Text and Button */
 .intro {
-    text-align: center; /* Center content */
+    text-align: center;
     padding: 3rem 1rem;
 }
 
 .intro h2 {
-    font-size: 3rem; /* Big text size */
+    font-size: 3rem;
     margin-bottom: 2rem;
-    color: #003a75; /* Dark blue color */
+    color: #ffffff;
 }
 
 .apply-button {
     display: inline-block;
-    background-color: #33C63A; /* Green background */
-    color: white; /* White text */
-    font-size: 2rem; /* Larger font size for big text */
-    padding: 30px 60px; /* Increased padding for larger size */
-    border-radius: 15px; /* Slightly rounded corners for a box-like appearance */
+    background-color: #33C63A;
+    color: white;
+    font-size: 2rem;
+    padding: 30px 60px;
+    border-radius: 15px;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for a lifted effect */
-    margin: 20px auto; /* Centering with margin */
-    display: block; /* Ensure it behaves like a box */
-    width: fit-content; /* Ensures box size adjusts to the content */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
 }
 
 .apply-button:hover {
-    background-color: #28a428; /* Slightly darker green on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    background-color: #28a745;
+    transform: scale(1.05);
 }
 
-
-.apply-button:hover {
-    background-color: #28a745; /* Darker green on hover */
+.apply-now-button{
+    color: antiquewhite;
 }
 
-
+/* Footer */
 footer {
     width: 100%;
-    background-color: #002752;
+    background-color: #092160;
     color: white;
-    padding: 10px 0; /* Reduced padding for smaller height */
+    padding: 10px 0;
     text-align: center;
     margin-top: auto;
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0 15px; /* Smaller padding */
+    padding: 0 15px;
     flex-wrap: wrap;
 }
 
-.footer-left, .footer-right{
+.footer-left, .footer-right {
     flex-basis: 20%;
     text-align: center;
-    margin-bottom: 10px; /* Smaller margin between sections */
+    margin-bottom: 10px;
     font-size: large;
 }
-
 
 .footer-left {
     text-align: left;
@@ -274,11 +239,9 @@ footer {
     margin-top: 50px;
 }
 
-
-
 #footer-nav {
     display: flex;
-    gap: 5px; /* Smaller gap */
+    gap: 5px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -287,8 +250,8 @@ footer {
     text-align: center;
     color: white;
     text-decoration: none;
-    margin: 0 3px; /* Smaller margin */
-    font-size: 15px; /* Smaller font size for links */
+    margin: 0 3px;
+    font-size: 25px;
 }
 
 #footer-nav a:hover {
@@ -298,14 +261,15 @@ footer {
 
 .footer-copy {
     text-align: center;
-    margin-top: 10px; /* Smaller margin above the copyright text */
-    font-size: 15px; /* Smaller font size */
+    margin-top: 10px;
+    font-size: 15px;
     width: 100%;
 }
 
+/* Footer Responsive Tweaks */
 @media (max-width: 768px) {
     footer {
-        padding: 10px 0; /* Reduced padding */
+        padding: 10px 0;
     }
 
     .footer-container {
@@ -326,12 +290,12 @@ footer {
     }
 
     .footer-copy {
-        margin-top: 10px; /* Reduced margin */
+        margin-top: 10px;
     }
 }
 
 @media (max-width: 480px) {
     #footer-nav a {
-        font-size: 10px; /* Even smaller font for extra-small screens */
+        font-size: 10px;
     }
 }
