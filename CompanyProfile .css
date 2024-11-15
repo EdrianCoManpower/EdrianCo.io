@@ -1,5 +1,106 @@
+
+* {
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's width/height */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.banner {
+    color: #000000;
+    text-align: center;
+    padding: 3rem 1rem;
+    
+}
+
+/* Main Content Sections */
+/* .section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}s
+
+.section h2 {
+    color: #0056b3;
+    margin-bottom: 1rem;
+} */
+
+
+/* Mission and Vision Section */
+/* Mission and Vision Section */
+.mission-vision {
+    display: flex; /* Align boxes in a row */
+    justify-content: center; /* Center align the boxes */
+    margin: 1rem 1rem 1rem 1rem;
+    max-width: 1700px;         
+    margin: 0 auto;           
+    padding: 20px;            
+    background-color: #f9f9f9;
+    border-radius: 10px;      
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: justify; 
+}
+
+.mission-box, .vision-box {
+    width: 43%; /* Default width for large screens */
+    padding: 3rem;
+    color: white;
+    border-radius: 8px;
+    margin: 0 30px; 
+}
+
+.mission-box {
+    background-color: #33C63A; /* Green for Mission */
+}
+
+.vision-box {
+    background-color: #0B215C; /* Blue for Vision */
+}
+
+/* Mission and Vision Heading */
+.mission-box h2, .vision-box h2 {
+    font-size: 3.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+.mission-box p, .vision-box p {
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-align: center;
+}
+
+/* Responsive Design: Stacking boxes on smaller screens */
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column; /* Stack the boxes vertically */
+        padding: 5px; /* Reduce padding for smaller screens */
+    }
+
+    .mission-box, .vision-box {
+        width: 90%; /* Make each box full width on smaller screens */
+        justify-content: center; /* Center align the boxes */
+        margin: 10px 20px; /* Add space between the stacked boxes */
+
+      
+    }
+
+    .mission-box h2, .vision-box h2 {
+        font-size: 2rem; /* Reduce font size for better readability on small screens */
+    }
+
+    .mission-box p, .vision-box p {
+        font-size: 1.5rem; /* Reduce font size for better readability on small screens */
+    }
+}
+
+
+
 #first {
-    max-width: 800px;         
+    max-width: 1700px;         
     margin: 0 auto;           
     padding: 20px;            
     background-color: #f9f9f9;
@@ -8,8 +109,14 @@
     text-align: justify;      
 }
 
-#first h1, #first p {
-    font-size: 1.2em;         
+#first h1{
+    font-size: 2.5em;
+    line-height: 1.6;         
+    margin-bottom: 15px; 
+}
+
+ #first p {
+    font-size: 1.5em;         
     line-height: 1.6;         
     margin-bottom: 15px;      
 }
